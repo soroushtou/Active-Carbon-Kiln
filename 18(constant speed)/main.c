@@ -1,6 +1,6 @@
 /*********************************
 
-   5KG   LOADCELL Driver  with HX711
+   3KG   LOADCELL Driver  with HX711
 
 **********************************/
 
