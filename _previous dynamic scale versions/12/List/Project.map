@@ -1,0 +1,84 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+Weight_Shiwu                                                                      0x0260       4
+Weight_Maopi                                                                      0x0264       4
+Weight_Shiwu1                                                                     0x0268       4
+Weight_Maopi1                                                                     0x026C       4
+Weight_Shiwu2                                                                     0x0270       4
+Weight_Maopi2                                                                     0x0274       4
+HX711_Buffer                                                                      0x0278       4
+HX711_Buffer1                                                                     0x027C       4
+HX711_Buffer2                                                                     0x0280       4
+scale_total                                                                       0x0284       4
+scale                                                                             0x0288       4
+scale1                                                                            0x028C       4
+scale2                                                                            0x0290       4
+scale_sum                                                                         0x0294       4
+scale1_sum                                                                        0x0298       4
+scale2_sum                                                                        0x029C       4
+scale_array                                                                       0x02A0      28
+scale1_array                                                                      0x02BC      28
+scale2_array                                                                      0x02D8      28
+buffer1                                                                           0x02F4      12
+buffer2                                                                           0x0300      12
+buffer3                                                                           0x030C      12
+buffer                                                                            0x0318      32
+str1                                                                              0x0338       8
+str2                                                                              0x0340       8
+str3                                                                              0x0348       8
+rx_buffer                                                                         0x0350      24
+_base_y                                                                           0x0368       4
+_seed                                                                             0x036C       4
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+timer2_counter                                                                    R4,R5        2
+pw                                                                                R6,R7        2
+rx_wr_index                                                                       R9           1
+rx_rd_index                                                                       R8           1
+rx_counter                                                                        R11          1
+rx_buffer_overflow                                                                R2.0      1bit
+_lcd_x                                                                            R10          1
+_lcd_y                                                                            R13          1
+_lcd_maxx                                                                         R12          1
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+usart_rx_isr                                                                      0x0008B     35
+main                                                                              0x000AE    188
+HX711_Read                                                                        0x0016A     32
+HX711_Read1                                                                       0x0018A     32
+HX711_Read2                                                                       0x001AA     32
+get_scale                                                                         0x001CA    330
+get_offset                                                                        0x00314     41
+get_offset1                                                                       0x0033D     41
+get_offset2                                                                       0x00366     43
+send                                                                              0x00391     22
+sort_array                                                                        0x003A7     96
+_lcd_write_nibble_G100                                                            0x00407     21
+_lcd_write_data                                                                   0x0041C     12
+lcd_gotoxy                                                                        0x00428     13
+lcd_clear                                                                         0x00435     12
+lcd_putchar                                                                       0x00441     21
+lcd_puts                                                                          0x00456     10
+lcd_putsf                                                                         0x00460     17
+lcd_init                                                                          0x00471     45
+putchar                                                                           0x0049E      7
+puts                                                                              0x004A5     14
+put_buff_G101                                                                     0x004B3     58
+_ftoe_G101                                                                        0x004ED    210
+_print_G101                                                                       0x005BF    538
+sprintf                                                                           0x007D9     52
+ftoa                                                                              0x0080D    194
+strcpyf                                                                           0x008CF     13
+strlen                                                                            0x008DC     12
+strlenf                                                                           0x008E8     13
+ftrunc                                                                            0x008F5     49
+floor                                                                             0x00926     23

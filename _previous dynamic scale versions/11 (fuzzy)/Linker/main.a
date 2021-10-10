@@ -1,0 +1,92 @@
+;/*********************************
+;
+;   5KG   LOADCELL Driver  with HX711
+;
+;**********************************/
+;
+;#include <mega32a.h>
+;PCODE: $00000000 VOL: 0
+	#ifndef __SLEEP_DEFINED__
+;PCODE: $00000001 VOL: 0
+	#define __SLEEP_DEFINED__
+;PCODE: $00000002 VOL: 0
+	.EQU __se_bit=0x80
+;PCODE: $00000003 VOL: 0
+	.EQU __sm_mask=0x70
+;PCODE: $00000004 VOL: 0
+	.EQU __sm_powerdown=0x20
+;PCODE: $00000005 VOL: 0
+	.EQU __sm_powersave=0x30
+;PCODE: $00000006 VOL: 0
+	.EQU __sm_standby=0x60
+;PCODE: $00000007 VOL: 0
+	.EQU __sm_ext_standby=0x70
+;PCODE: $00000008 VOL: 0
+	.EQU __sm_adc_noise_red=0x10
+;PCODE: $00000009 VOL: 0
+	.SET power_ctrl_reg=mcucr
+;PCODE: $0000000A VOL: 0
+	#endif
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+;#include <delay.h>
+;#include <alcd.h>
+;#include <stdio.h>
+;#include <stdlib.h>
+;//#include <fuzzy.h>
+;
+;#define Variable_fuzzy_co                          (*(pcvfuzzy_co+  0))
+;#define Weight_fuzzy_co                            (*(pcvfuzzy_co+  1))
+;#define MotorVoltage_fuzzy_co                      (*(pcvfuzzy_co+  2))
+;
+;/*-------------------------------------------------------------------------*/
+;/*------------------- fuzzyTECH 5.54 Professional Edition -----------------*/
+;/*-------------------------------------------------------------------------*/
+;/*---------------------- Code Generator: C Source Code --------------------*/
+;/*------------- Code Generation Date: Fri Jul 10 12:23:01 2020 ------------*/
+;/*---------------------- Fuzzy Logic System: FUZZY_CO ---------------------*/
+;/*-------------------------------------------------------------------------*/
+;/*-------- (c) 1991-2003 INFORM GmbH, Pascalstr. 23, D-52076 Aachen -------*/
+;/*------ Inform Software Corp., 2001 Midwest Rd., Oak Brook, IL 60523 -----*/
+;/*-------------------------------------------------------------------------*/
+;
+;#define PRECOMPILER
+;#define FTLIBC16
+;#include "ftlibc.h"
+;#define FUZZYDEFINED
+;#define FLAGSDEFINED
+;//#include "FUZZY_COde.h"
+;
+;static FUZZY crispio[2+1];
+;
+;static FUZZY fuzvals[10+5+0];
+;
+;static double dcvs[2+1];
+;double * const pcvfuzzy_co = dcvs;
+
+	.DSEG
+;
+;
+;static const FUZZY tpts[46] = {
+;  0x0000, 0x0000, 0x3333, 0x5999,
+;  0x3333, 0x5999, 0x5999, 0x8000,
+;  0x0000, 0x0000, 0x7333, 0x0000, 0x8000, 0xFFFF, 0x8CCC, 0x0264, 0xFFFF, 0x0000,
+;  0x8000, 0xA666, 0xA666, 0xCCCC,
+;  0xA666, 0xCCCC, 0xFFFF, 0xFFFF,
+;  0x0000, 0x0000, 0x199A, 0x4000,
+;  0x199A, 0x4000, 0x4000, 0x6666,
+;  0x4000, 0x6666, 0x6666, 0x8CCC,
+;  0x6666, 0x8CCC, 0x8CCC, 0xB333,
+;  0x8CCC, 0xB333, 0xFFFF, 0xFFFF};
+;
+;static const FUZZY xcom[5] = {
+;  0x1555, 0x4000, 0x6AAA, 0x9555, 0xBFFF};
+;
+;static const BYTE rt0[100] = {
+; 0000 003B static const BYTE rt0[100] = {
+
+	.CSEG
+;PCODE: $0000000D VOL: 0
+;PCODE: $0000000E VOL: 0
+;PCODE: $0000000F VOL: 0
+;PCODE: $00000010 VOL: 0
