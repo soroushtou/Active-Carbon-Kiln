@@ -23,7 +23,7 @@ Main Features:
 
   - All parameters and data are sent to Excel
 
-
+________________________________________________________________________________________________________________________
 ![1](https://github.com/soroushtou/Active-Carbon-Kiln/blob/main/Project1/1%20(7).jpg)
 This is the whole Kiln structure. Pistachio crusts are fed through the hopper (right side of the kiln) and moved to the kiln with a screw conveyor. The kiln itself rotates slowly with a wheelchair motor and some belt-gear transmitters. By having a slight angle and rotation, crusts are moved slowly to the left side(end of the kiln). 
 
